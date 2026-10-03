@@ -1,37 +1,16 @@
 /* permasoftware assembly :: one small stylesheet, system fonts only */
 :root {
-  --ink: #000;
-  --paper: #fff;
-  --meta: #555;
-  --hl: #ececec;
-  --morse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2682' height='120' font-family='Courier New,monospace' font-size='15' fill='%23000' fill-opacity='.22'%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='24' xml:space='preserve'%3E.--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .--   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- - .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   %3C/text%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='64' xml:space='preserve'%3E-   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- - .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   .--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .-%3C/text%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='104' xml:space='preserve'%3E- .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   .--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .--   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- %3C/text%3E%3C/svg%3E");
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #eee;
-    --paper: #111;
-    --meta: #999;
-    --hl: #262626;
-    --morse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2682' height='120' font-family='Courier New,monospace' font-size='15' fill='%23fff' fill-opacity='.22'%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='24' xml:space='preserve'%3E.--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .--   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- - .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   %3C/text%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='64' xml:space='preserve'%3E-   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- - .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   .--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .-%3C/text%3E%3Ctext x='0' textLength='2682' lengthAdjust='spacing' y='104' xml:space='preserve'%3E- .   /   .- -.-. - .. --- -.   /   - . -.-. ....   /   ... --- ...- . .-. . .. --. -. - -.--   /   .--. . .-. -- .- ... --- ..-. - .-- .- .-. .   /   .- ... ... . -- -... .-.. -.--   /   .-.. --- .--   /   ..-. --- --- - .--. .-. .. -. -   /   ... --- ..-. - .-- .- .-. .   /   -.-. .-.. .. -- .- %3C/text%3E%3C/svg%3E");
-  }
+  /* always black: on OLED screens black pixels use no power */
+  color-scheme: dark;
+  --ink: #e6e6e6;
+  --paper: #000;
+  --meta: #999;
+  --hl: #1c1c1c;
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
-/* background: Morse code that scrolls slowly around the content (CSS only).
-   Rows alternate direction. Only a transform moves, so the browser does not repaint the page.
-   The text column and the map stay a solid colour. */
 html { background: var(--paper); }
-html::before, html::after {
-  content: ""; position: fixed; z-index: -1; pointer-events: none;
-  top: 0; bottom: 0; left: 0; width: calc(100vw + 2682px);
-  background: var(--morse) repeat;
-  animation: morse-left 240s linear infinite;
-}
-html::after { background-position: 0 20px; animation-name: morse-right; }
-@keyframes morse-left { from { transform: translateX(0); } to { transform: translateX(-2682px); } }
-@keyframes morse-right { from { transform: translateX(-2682px); } to { transform: translateX(0); } }
-@media (prefers-reduced-motion: reduce) { html::before, html::after { animation: none; } }
 body {
   margin: 0 auto;
   padding: 24px 16px 40px;
