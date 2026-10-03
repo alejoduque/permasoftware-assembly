@@ -10,7 +10,9 @@ Website: <https://alejoduque.github.io/permasoftware-assembly/> :: [en](index.ht
 
 ## // what
 
-Artist-coders and climate activists make software together. The software helps climate campaigns. It uses little energy and it lasts. The group keeps control of its tools, data and servers.
+Artist-coders and climate activists make software together. The software helps climate campaigns. Our aim: software that uses little energy and lasts a long time. We also want tech sovereignty: the group controls its tools, data and servers.
+
+**Where the code is.** GitHub hosts this site and the code. Microsoft owns GitHub. We use GitHub because many people find code there. This is a compromise, and we know it. Radiolibre, iScream and KLAP run on a small rented server that we manage.
 
 ## // principles
 
@@ -49,8 +51,8 @@ The full map, with every repository, status and link: [PROJECTS.md](PROJECTS.md)
 
 ## // this repository
 
-- Static HTML and one CSS file. No JavaScript, no build step, no external requests, no tracking.
-- Each page is about 32 KB, images included. The title is ASCII art; the one image is a 1-bit dithered PNG.
+- Static HTML and one CSS file. No JavaScript, no build step, no external requests, no analytics. GitHub can see the visits, because it hosts the pages.
+- Each page is about 33 KB, images included. The title is ASCII art; the one image is a 1-bit dithered PNG.
 - To edit a page, change the HTML file of that language: `index.html` (en), `es/`, `fr/`, `de/`.
 - To see the site on your computer: `python3 -m http.server` and open <http://localhost:8000>.
 - GitHub Pages serves the `main` branch from the root folder.
@@ -59,7 +61,7 @@ The full map, with every repository, status and link: [PROJECTS.md](PROJECTS.md)
 
 - **Alejandro Duque Jaramillo** :: coordination, KLAP, Radiolibre.
 - **Gonzague Rebetez** :: AI advisor, WÆXE.
-- **Creative Climate Changemakers Switzerland 2026** :: seed grant.
+- **Creative Climate Changemakers Switzerland 2026** :: seed grant. [Announcement](https://www.stiftung-mercator.ch/journal/kultur-fuers-klima) by Stiftung Mercator Schweiz, 13 July 2026.
 
 To join, open an [issue](https://github.com/alejoduque/permasoftware-assembly/issues). Tell us about your project and your software needs.
 

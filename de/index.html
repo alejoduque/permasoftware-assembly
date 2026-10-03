@@ -34,7 +34,8 @@
 <h1 class="sr-only">PERMASOFTWARE ASSEMBLY</h1>
 <p class="tagline">eine Plattform für Software mit kleinem Fussabdruck für Klimaschutz und technologische Souveränität</p>
 <div class="bar"></div>
-<p class="lead">Künstler-Coder:innen und Klimaaktivist:innen machen gemeinsam Software. Die Software hilft Klimakampagnen. Sie braucht wenig Energie und hält lange. Die Gruppe behält die Kontrolle über ihre Werkzeuge, Daten und Server. Das nennen wir technologische Souveränität.</p>
+<p class="lead">Künstler-Coder:innen und Klimaaktivist:innen machen gemeinsam Software. Die Software hilft Klimakampagnen. Unser Ziel: Software, die wenig Energie braucht und lange hält. Wir wollen auch technologische Souveränität: Die Gruppe kontrolliert ihre Werkzeuge, Daten und Server.</p>
+<p class="meta"><b>wo der Code liegt ::</b> GitHub hostet diese Seite und den Code. GitHub gehört Microsoft. Wir nutzen GitHub, weil viele Menschen dort Code finden. Das ist ein Kompromiss, und wir wissen es. Radiolibre, iScream und KLAP laufen auf einem kleinen gemieteten Server, den wir selbst verwalten.</p>
 </header>
 
 <main>
@@ -55,69 +56,80 @@
 <section>
 <h2>2. projekte :: karte</h2>
 <p>Diese Projekte gibt es schon. Sie sind die ersten Teile der Plattform. Die Projekte verbinden sich in drei Zweigen: hören, entscheiden und senden.</p>
-<pre class="tree"><span class="row"><b>PERMASOFTWARE ASSEMBLY</b>
-|</span><span class="row">+-- <b>// hören</b>
+<div class="map">
+<pre class="tree wide"><b>PERMASOFTWARE ASSEMBLY</b>
+|
++-------------------------------------------------+
+|                                                 |</pre><pre class="tree narrow"><b>PERMASOFTWARE ASSEMBLY</b>
+|</pre><div class="cols"><pre class="tree col"><span class="row">+-- <b>// hören</b>
 |   |</span><span class="node">|   +-- <b>AudioMoth scripts</b>
-|   |     Skripte für Feldaufnahmen von AudioMoth-
-|   |     Rekordern. Sie finden Klangereignisse,
-|   |     berechnen akustische Indizes und erstellen
-|   |     einen saisonalen Kalender. Die ganze
-|   |     Verarbeitung ist lokal, ohne Cloud.
-|   |     läuft auf
-|   |     einem Laptop, Bash, Python, ffmpeg
-|   |     >> <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a> :: <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a>
+|   |     Skripte für Feldaufnahmen von
+|   |     AudioMoth-Rekordern. Sie finden
+|   |     Klangereignisse, berechnen akustische
+|   |     Indizes und erstellen einen saisonalen
+|   |     Kalender. Die ganze Verarbeitung ist
+|   |     lokal, ohne Cloud.
+|   |     läuft auf :: einem Laptop, Bash,
+|   |     Python, ffmpeg
+|   |     >> <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a>
+|   |     >> <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a>
 |   |     -&gt; BiocracyEngine
 |   |</span><span class="node">|   +-- <b>SoundWalk :: DerivaSonora</b>
-|   |     Eine Handy-App für Klangspaziergänge. Klänge
-|   |     mit Ort aufnehmen, Notizen hinzufügen und
-|   |     auf einer Karte wieder anhören. Sie
-|   |     funktioniert offline: kein Konto, kein
-|   |     Server, kein Tracking.
+|   |     Eine Handy-App für Klangspaziergänge.
+|   |     Klänge mit Ort aufnehmen, Notizen
+|   |     hinzufügen und auf einer Karte wieder
+|   |     anhören. Sie funktioniert offline:
+|   |     kein Konto, kein Server, kein
+|   |     Tracking.
 |   |     läuft auf :: Android-Handys, Browser
 |   |     >> <a href="https://biomapp.vercel.app">biomapp.vercel.app</a>
 |   |     >> Code noch nicht öffentlich
 |   |     -&gt; BiocracyEngine
 |   |</span><span class="node">|   `-- <b>BiocracyEngine</b>
 |         Live-Instrument für Klang und Bild:
-|         Waldklänge, ein Blockchain-Strom und ein
-|         Parlament vieler Arten.
+|         Waldklänge, ein Blockchain-Strom und
+|         ein Parlament vieler Arten.
 |         >> <a href="https://github.com/alejoduque/BiocracyEngine">Code</a>
-|</span><span class="row">+-- <b>// entscheiden</b>
+|</span><span class="row">|</span><span class="row">+-- <b>// entscheiden</b>
 |   |</span><span class="node">|   +-- <b>KLAP :: Klimat Action Protocol</b>
 |   |     Ein freies Werkzeug für
-|   |     Gruppenentscheidungen. Eine Person schreibt
-|   |     eine These. Andere fügen Gründe hinzu: weil,
-|   |     aber, jedoch. Das Werkzeug zeigt, wo die
-|   |     Gruppe übereinstimmt.
-|   |     läuft auf :: Django, Docker, eigener Server
+|   |     Gruppenentscheidungen. Eine Person
+|   |     schreibt eine These. Andere fügen
+|   |     Gründe hinzu: weil, aber, jedoch. Das
+|   |     Werkzeug zeigt, wo die Gruppe
+|   |     übereinstimmt.
+|   |     läuft auf :: Django, Docker, eigener
+|   |     Server
 |   |     >> <a href="https://klap.altred.xyz">klap.altred.xyz</a> :: <a href="https://github.com/alejoduque/KlimatActionProtocol">Code</a>
 |   |     >> basiert auf arguman.org
 |   |</span><span class="node">|   `-- <b>DIAP</b>
-|         Entwurf einer Gemeinschafts-DAO für die
-|         Verwaltung von Land. Sie nutzt
+|         Entwurf einer Gemeinschafts-DAO für
+|         die Verwaltung von Land. Sie nutzt
 |         energiesparsame Blockchains.
 |         >> <a href="https://github.com/alejoduque/DIAP">Code</a>
 |         -&gt; BiocracyEngine
-|</span><span class="row">+-- <b>// senden</b>
+|</span><span class="row">|</span></pre><pre class="tree col"><span class="row">+-- <b>// senden</b>
 |   |</span><span class="node">|   +-- <b>Telegram-Gruppe</b>
 |   |     -&gt; LiquidIce
 |   |     &lt;-&gt; iScream (IRC)
 |   |</span><span class="node">|   +-- <b>LiquidIce</b>
-|   |     Ein Telegram-Bot für eine Gruppe. Mitglieder
-|   |     senden Fotos, Texte, Audio und Video. Der
-|   |     Bot macht daraus ein Web-Archiv und einen
-|   |     Radio-Stream. Er speichert eine Kopie auf
-|   |     archive.org.
-|   |     läuft auf :: Raspberry Pi 3B+, Liquidsoap
+|   |     Ein Telegram-Bot für eine Gruppe.
+|   |     Mitglieder senden Fotos, Texte, Audio
+|   |     und Video. Der Bot macht daraus ein
+|   |     Web-Archiv und einen Radio-Stream. Er
+|   |     speichert eine Kopie auf archive.org.
+|   |     läuft auf :: Raspberry Pi 3B+,
+|   |     Liquidsoap
 |   |     >> Code noch nicht öffentlich
 |   |     >> erste Version <a href="https://github.com/alejoduque/Telegram2Icecast">Telegram2Icecast</a>
 |   |     -&gt; Icecast-Stream
 |   |</span><span class="node">|   +-- <b>iScream</b>
-|   |     Vom Handy-Browser aus auf Sendung gehen.
-|   |     Keine App und kein Konto nötig. Der Server
-|   |     speichert kein Audio und keine
-|   |     Zugriffsprotokolle. Eine Brücke verbindet
-|   |     den IRC-Chat und die Telegram-Gruppe.
+|   |     Vom Handy-Browser aus auf Sendung
+|   |     gehen. Keine App und kein Konto nötig.
+|   |     Der Server speichert kein Audio und
+|   |     keine Zugriffsprotokolle. Eine Brücke
+|   |     verbindet den IRC-Chat und die
+|   |     Telegram-Gruppe.
 |   |     läuft auf :: Node, ffmpeg, Ergo IRC
 |   |     >> <a href="https://reporta.altred.xyz">reporta.altred.xyz</a>
 |   |     >> Code noch nicht öffentlich
@@ -126,13 +138,30 @@
 |   |     -&gt; Radiolibre
 |   |</span><span class="node">|   `-- <b>Radiolibre</b>
 |         Ein Community-Radio auf einem kleinen
-|         Server. Icecast sendet das Audio und ein
-|         statischer Web-Player empfängt es.
+|         Server. Icecast sendet das Audio und
+|         ein statischer Web-Player empfängt es.
 |         Hörer:innen brauchen kein Konto.
 |         läuft auf :: einem VPS, Icecast, nginx
 |         >> <a href="https://radiolibre.altred.xyz">radiolibre.altred.xyz</a> :: <a href="https://github.com/alejoduque/radiolibre_template">Code</a>
-|</span><span class="node">`.. <a href="#next"><b>nächster Schritt</b></a>
+|</span><span class="row">|</span><span class="pad">|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|</span></pre></div><pre class="tree wide">+------------------------+------------------------+
+                         |
+                         `.. <a href="#next"><b>nächster Schritt</b></a>
+                               Reticulum · Telegram-Bots · lokale KI</pre><pre class="tree narrow"><span class="node">`.. <a href="#next"><b>nächster Schritt</b></a>
       Reticulum · Telegram-Bots · lokale KI</span></pre>
+</div>
 <p class="meta">-&gt; Daten oder Code gehen in diese Richtung. Unterstrichene Namen sind Links. Ganze Karte: <a href="https://github.com/alejoduque/permasoftware-assembly/blob/main/PROJECTS.md">PROJECTS.md</a></p>
 </section>
 
@@ -189,7 +218,7 @@
 <ul class="gt">
 <li><b>Alejandro Duque Jaramillo</b> :: Koordination. Schweizerisch-kolumbianischer Künstler. Linux und Kulturmanagement. Entwickler von KLAP und Radiolibre.</li>
 <li><b>Gonzague Rebetez</b> :: KI-Berater. New-Media-Künstler in Biel/Bienne. Mitgründer des Kunst- und Wissenschaftskollektivs WÆXE.</li>
-<li><b>Creative Climate Changemakers Switzerland 2026</b> :: Seed Grant.</li>
+<li><b>Creative Climate Changemakers Switzerland 2026</b> :: Seed Grant. <a href="https://www.stiftung-mercator.ch/journal/kultur-fuers-klima">Mitteilung</a> der Stiftung Mercator Schweiz, 13. Juli 2026.</li>
 </ul>
 <p><b>Mitmachen.</b> Eröffne ein Issue auf <a href="https://github.com/alejoduque/permasoftware-assembly/issues">GitHub</a>. Erzähl uns von deinem Projekt und deinen Software-Bedürfnissen.</p>
 </section>
@@ -197,7 +226,7 @@
 
 <footer>
 <p>permasoftware assembly :: ccc switzerland seed grants 2026</p>
-<p>Text CC BY-SA 4.0 :: Code MIT :: keine Cookies, kein Tracking, kein JavaScript :: diese Seite: 32 KB</p>
+<p>Text CC BY-SA 4.0 :: Code MIT :: keine Cookies, keine Besucherstatistik, kein JavaScript :: diese Seite: 34 KB</p>
 </footer>
 
 </body>

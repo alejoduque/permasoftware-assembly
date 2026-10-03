@@ -34,7 +34,8 @@
 <h1 class="sr-only">PERMASOFTWARE ASSEMBLY</h1>
 <p class="tagline">a platform for low-footprint software for climate action and tech sovereignty</p>
 <div class="bar"></div>
-<p class="lead">Artist-coders and climate activists make software together. The software helps climate campaigns. It uses little energy and it lasts. The group keeps control of its tools, data and servers. We call this tech sovereignty.</p>
+<p class="lead">Artist-coders and climate activists make software together. The software helps climate campaigns. Our aim: software that uses little energy and lasts a long time. We also want tech sovereignty: the group controls its tools, data and servers.</p>
+<p class="meta"><b>where the code is ::</b> GitHub hosts this site and the code. Microsoft owns GitHub. We use GitHub because many people find code there. This is a compromise, and we know it. Radiolibre, iScream and KLAP run on a small rented server that we manage.</p>
 </header>
 
 <main>
@@ -55,77 +56,104 @@
 <section>
 <h2>2. projects :: map</h2>
 <p>These projects exist now. They are the first parts of the platform. The projects connect in three branches: listen, decide and broadcast.</p>
-<pre class="tree"><span class="row"><b>PERMASOFTWARE ASSEMBLY</b>
-|</span><span class="row">+-- <b>// listen</b>
+<div class="map">
+<pre class="tree wide"><b>PERMASOFTWARE ASSEMBLY</b>
+|
++-------------------------------------------------+
+|                                                 |</pre><pre class="tree narrow"><b>PERMASOFTWARE ASSEMBLY</b>
+|</pre><div class="cols"><pre class="tree col"><span class="row">+-- <b>// listen</b>
 |   |</span><span class="node">|   +-- <b>AudioMoth scripts</b>
-|   |     Scripts for field recordings from AudioMoth
-|   |     recorders. They find sound events, calculate
-|   |     acoustic indices and make a seasonal
-|   |     calendar. All processing is local, with no
-|   |     cloud.
-|   |     runs on :: a laptop, Bash, Python, ffmpeg
-|   |     >> <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a> :: <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a>
+|   |     Scripts for field recordings from
+|   |     AudioMoth recorders. They find sound
+|   |     events, calculate acoustic indices and
+|   |     make a seasonal calendar. All
+|   |     processing is local, with no cloud.
+|   |     runs on :: a laptop, Bash, Python,
+|   |     ffmpeg
+|   |     >> <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a>
+|   |     >> <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a>
 |   |     -&gt; BiocracyEngine
 |   |</span><span class="node">|   +-- <b>SoundWalk :: DerivaSonora</b>
-|   |     A phone app for sound walks. Record sounds
-|   |     with their location, add notes and listen
-|   |     again on a map. It works offline: no
-|   |     account, no server, no tracking.
+|   |     A phone app for sound walks. Record
+|   |     sounds with their location, add notes
+|   |     and listen again on a map. It works
+|   |     offline: no account, no server, no
+|   |     tracking.
 |   |     runs on :: Android phones, browser
-|   |     >> <a href="https://biomapp.vercel.app">biomapp.vercel.app</a> :: code not public yet
+|   |     >> <a href="https://biomapp.vercel.app">biomapp.vercel.app</a>
+|   |     >> code not public yet
 |   |     -&gt; BiocracyEngine
 |   |</span><span class="node">|   `-- <b>BiocracyEngine</b>
-|         Live sound and image instrument: forest
-|         sounds, a blockchain stream and a
-|         multispecies parliament.
+|         Live sound and image instrument:
+|         forest sounds, a blockchain stream and
+|         a multispecies parliament.
 |         >> <a href="https://github.com/alejoduque/BiocracyEngine">code</a>
-|</span><span class="row">+-- <b>// decide</b>
+|</span><span class="row">|</span><span class="row">+-- <b>// decide</b>
 |   |</span><span class="node">|   +-- <b>KLAP :: Klimat Action Protocol</b>
-|   |     A free tool for group decisions. One person
-|   |     writes a claim. Other people add reasons:
-|   |     because, but, however. The tool shows where
-|   |     the group agrees.
-|   |     runs on :: Django, Docker, your own server
+|   |     A free tool for group decisions. One
+|   |     person writes a claim. Other people
+|   |     add reasons: because, but, however.
+|   |     The tool shows where the group agrees.
+|   |     runs on :: Django, Docker, your own
+|   |     server
 |   |     >> <a href="https://klap.altred.xyz">klap.altred.xyz</a> :: <a href="https://github.com/alejoduque/KlimatActionProtocol">code</a>
 |   |     >> based on arguman.org
 |   |</span><span class="node">|   `-- <b>DIAP</b>
 |         Design for a community DAO for land
-|         governance. It uses low-energy blockchains.
+|         governance. It uses low-energy
+|         blockchains.
 |         >> <a href="https://github.com/alejoduque/DIAP">code</a>
 |         -&gt; BiocracyEngine
-|</span><span class="row">+-- <b>// broadcast</b>
+|</span><span class="row">|</span></pre><pre class="tree col"><span class="row">+-- <b>// broadcast</b>
 |   |</span><span class="node">|   +-- <b>Telegram group</b>
 |   |     -&gt; LiquidIce
 |   |     &lt;-&gt; iScream (IRC)
 |   |</span><span class="node">|   +-- <b>LiquidIce</b>
-|   |     A Telegram bot for a group. Members send
-|   |     photos, texts, audio and video. The bot
-|   |     makes a website archive and a radio stream.
-|   |     It keeps a copy on archive.org.
-|   |     runs on :: Raspberry Pi 3B+, Liquidsoap
+|   |     A Telegram bot for a group. Members
+|   |     send photos, texts, audio and video.
+|   |     The bot makes a website archive and a
+|   |     radio stream. It keeps a copy on
+|   |     archive.org.
+|   |     runs on :: Raspberry Pi 3B+,
+|   |     Liquidsoap
 |   |     >> code not public yet
 |   |     >> first version <a href="https://github.com/alejoduque/Telegram2Icecast">Telegram2Icecast</a>
 |   |     -&gt; Icecast stream
 |   |</span><span class="node">|   +-- <b>iScream</b>
-|   |     Go on air from a phone browser. You do not
-|   |     need an app or an account. The server keeps
-|   |     no audio and no access logs. A bridge
-|   |     connects the IRC chat and the Telegram
-|   |     group.
+|   |     Go on air from a phone browser. You do
+|   |     not need an app or an account. The
+|   |     server keeps no audio and no access
+|   |     logs. A bridge connects the IRC chat
+|   |     and the Telegram group.
 |   |     runs on :: Node, ffmpeg, Ergo IRC
-|   |     >> <a href="https://reporta.altred.xyz">reporta.altred.xyz</a> :: code not public yet
+|   |     >> <a href="https://reporta.altred.xyz">reporta.altred.xyz</a>
+|   |     >> code not public yet
 |   |     -&gt; Icecast stream
 |   |</span><span class="node">|   +-- <b>Icecast stream</b>
 |   |     -&gt; Radiolibre
 |   |</span><span class="node">|   `-- <b>Radiolibre</b>
 |         A community radio on one small server.
-|         Icecast sends the audio and a static web
-|         player receives it. Listeners do not need an
-|         account.
+|         Icecast sends the audio and a static
+|         web player receives it. Listeners do
+|         not need an account.
 |         runs on :: one VPS, Icecast, nginx
 |         >> <a href="https://radiolibre.altred.xyz">radiolibre.altred.xyz</a> :: <a href="https://github.com/alejoduque/radiolibre_template">code</a>
-|</span><span class="node">`.. <a href="#next"><b>next</b></a>
+|</span><span class="row">|</span><span class="pad">|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|</span></pre></div><pre class="tree wide">+------------------------+------------------------+
+                         |
+                         `.. <a href="#next"><b>next</b></a>
+                               Reticulum · Telegram bots · local AI</pre><pre class="tree narrow"><span class="node">`.. <a href="#next"><b>next</b></a>
       Reticulum · Telegram bots · local AI</span></pre>
+</div>
 <p class="meta">-&gt; data or code goes this way. Underlined names are links. Full map: <a href="https://github.com/alejoduque/permasoftware-assembly/blob/main/PROJECTS.md">PROJECTS.md</a></p>
 </section>
 
@@ -182,7 +210,7 @@
 <ul class="gt">
 <li><b>Alejandro Duque Jaramillo</b> :: coordination. Swiss–Colombian artist. Linux and cultural management. Developer of KLAP and Radiolibre.</li>
 <li><b>Gonzague Rebetez</b> :: AI advisor. New-media artist in Biel/Bienne. Co-founder of the art/science collective WÆXE.</li>
-<li><b>Creative Climate Changemakers Switzerland 2026</b> :: seed grant.</li>
+<li><b>Creative Climate Changemakers Switzerland 2026</b> :: seed grant. <a href="https://www.stiftung-mercator.ch/journal/kultur-fuers-klima">Announcement</a> by Stiftung Mercator Schweiz, 13 July 2026.</li>
 </ul>
 <p><b>Join.</b> Open an issue on <a href="https://github.com/alejoduque/permasoftware-assembly/issues">GitHub</a>. Tell us about your project and your software needs.</p>
 </section>
@@ -190,7 +218,7 @@
 
 <footer>
 <p>permasoftware assembly :: ccc switzerland seed grants 2026</p>
-<p>text CC BY-SA 4.0 :: code MIT :: no cookies, no tracking, no JavaScript :: this page: 32 KB</p>
+<p>text CC BY-SA 4.0 :: code MIT :: no cookies, no analytics, no JavaScript :: this page: 33 KB</p>
 </footer>
 
 </body>

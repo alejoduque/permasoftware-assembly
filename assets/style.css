@@ -62,13 +62,18 @@ ul.gt { list-style: none; padding: 0; margin: 0 0 10px; }
 ul.gt li { padding-left: 2.2ch; text-indent: -2.2ch; margin-bottom: 4px; }
 ul.gt li::before { content: "> "; font-weight: bold; }
 
-/* projects :: map — one ASCII tree, each node is a block */
-pre.tree {
-  font-family: inherit; color: var(--ink);
-  font-size: max(10px, min(15px, calc((100vw - 32px) / 33))); line-height: 1.45;
-  margin: 14px 0; overflow-x: auto;
+/* projects :: map — ASCII tree. Narrow screens: one column.
+   Wide screens: two columns of 50 characters, wider than the text column, never wider than the screen. */
+.map { font-size: max(9px, min(15px, calc((100vw - 32px) / 30.5))); margin: 14px 0; }
+pre.tree { font-family: inherit; font-size: inherit; line-height: 1.45; color: var(--ink); margin: 0; overflow: hidden; }
+pre.tree .node, pre.tree .row, pre.tree .pad { display: block; }
+.map .wide, .map .pad { display: none; }
+@media (min-width: 760px) {
+  .map { font-size: min(15px, calc((100vw - 48px) / 60)); width: 100ch; margin-left: calc(50% - 50ch); }
+  .map .cols { display: grid; grid-template-columns: 50ch 50ch; }
+  .map .wide, .map .pad { display: block; }
+  .map .narrow { display: none; }
 }
-pre.tree .node, pre.tree .row { display: block; }
 
 /* figures: inline svg uses currentColor */
 figure { margin: 14px 0; overflow-x: auto; }
