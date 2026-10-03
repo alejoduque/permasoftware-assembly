@@ -4,6 +4,7 @@
   --paper: #fff;
   --meta: #555;
   --hl: #ececec;
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='288' font-family='Courier New,monospace' font-size='15' fill='%23000' fill-opacity='.22'%3E%3Ctext x='0' y='14' xml:space='preserve'%3E                             .       :                 .  . %3C/text%3E%3Ctext x='0' y='32' xml:space='preserve'%3E                       .                         .      ::  %3C/text%3E%3Ctext x='0' y='50' xml:space='preserve'%3E                               :  .   .              .   .  %3C/text%3E%3Ctext x='0' y='68' xml:space='preserve'%3E               .                                            %3C/text%3E%3Ctext x='0' y='86' xml:space='preserve'%3E       .    : :                        :                   .%3C/text%3E%3Ctext x='0' y='104' xml:space='preserve'%3E              :                :                            %3C/text%3E%3Ctext x='0' y='122' xml:space='preserve'%3E        :               .         :                :        %3C/text%3E%3Ctext x='0' y='140' xml:space='preserve'%3E                                                      :     %3C/text%3E%3Ctext x='0' y='158' xml:space='preserve'%3E          :         .    :    .  :                          %3C/text%3E%3Ctext x='0' y='176' xml:space='preserve'%3E. :        . .                                              %3C/text%3E%3Ctext x='0' y='194' xml:space='preserve'%3E . .        .     .        .:                               %3C/text%3E%3Ctext x='0' y='212' xml:space='preserve'%3E.        .      :                       . .       :        .%3C/text%3E%3Ctext x='0' y='230' xml:space='preserve'%3E                     :  .       .      .      :             %3C/text%3E%3Ctext x='0' y='248' xml:space='preserve'%3E .           .   : . .      .    :                         :%3C/text%3E%3Ctext x='0' y='266' xml:space='preserve'%3E                                        :    .            . %3C/text%3E%3Ctext x='0' y='284' xml:space='preserve'%3E                     .        . .                           %3C/text%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -11,11 +12,14 @@
     --paper: #111;
     --meta: #999;
     --hl: #262626;
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='288' font-family='Courier New,monospace' font-size='15' fill='%23fff' fill-opacity='.16'%3E%3Ctext x='0' y='14' xml:space='preserve'%3E.       .            .                         .     .      %3C/text%3E%3Ctext x='0' y='32' xml:space='preserve'%3E                    .                                       %3C/text%3E%3Ctext x='0' y='50' xml:space='preserve'%3E             : .                .      :             .      %3C/text%3E%3Ctext x='0' y='68' xml:space='preserve'%3E           .  . .                                           %3C/text%3E%3Ctext x='0' y='86' xml:space='preserve'%3E    .           :          .     .              .           %3C/text%3E%3Ctext x='0' y='104' xml:space='preserve'%3E                                     .      .     .         %3C/text%3E%3Ctext x='0' y='122' xml:space='preserve'%3E   .                          : .  .  :.:  .    .           %3C/text%3E%3Ctext x='0' y='140' xml:space='preserve'%3E    :.  .  ::             .     :       .                   %3C/text%3E%3Ctext x='0' y='158' xml:space='preserve'%3E   .                          :   :                ..     : %3C/text%3E%3Ctext x='0' y='176' xml:space='preserve'%3E  .               .        ..             .     .   .       %3C/text%3E%3Ctext x='0' y='194' xml:space='preserve'%3E  .          .                       .                 :    %3C/text%3E%3Ctext x='0' y='212' xml:space='preserve'%3E      .        .           :                   .         :  %3C/text%3E%3Ctext x='0' y='230' xml:space='preserve'%3E    .                .    .   :                .            %3C/text%3E%3Ctext x='0' y='248' xml:space='preserve'%3E               .                  .                     : . %3C/text%3E%3Ctext x='0' y='266' xml:space='preserve'%3E  .       .        .               :.       .       .       %3C/text%3E%3Ctext x='0' y='284' xml:space='preserve'%3E         .                :              .                  %3C/text%3E%3C/svg%3E");
   }
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+/* the banner noise, repeated around the content; the text column stays a solid colour */
+html { background: var(--paper) var(--noise) repeat; }
 body {
   margin: 0 auto;
   padding: 24px 16px 40px;
@@ -33,7 +37,7 @@ img { display: block; width: 100%; height: auto; image-rendering: pixelated; mar
   display: flex; justify-content: center;
   width: 100vw; margin: 4px 0 0 calc(50% - 50vw);
   overflow: hidden; white-space: pre;
-  font-size: min(18px, calc((100vw - 24px) / 35)); line-height: 1;
+  font-size: min(22px, calc((100vw - 24px) / 31.5)); line-height: 1;
   /* box-drawing title (oh-my-logo, block font 'chrome'): fonts with full box-drawing glyphs */
   font-family: "Courier New", Menlo, Consolas, "DejaVu Sans Mono", monospace; color: var(--ink);
 }
@@ -65,7 +69,7 @@ ul.gt li::before { content: "> "; font-weight: bold; }
 
 /* projects :: map — ASCII tree. Narrow screens: one column.
    Wide screens: two columns of 50 characters, wider than the text column, never wider than the screen. */
-.map { font-size: max(9px, min(15px, calc((100vw - 32px) / 30.5))); margin: 14px 0; }
+.map { background: var(--paper); font-size: max(9px, min(15px, calc((100vw - 32px) / 30.5))); margin: 14px 0; }
 pre.tree { font-family: inherit; font-size: inherit; line-height: 1.45; color: var(--ink); margin: 0; overflow: hidden; }
 pre.tree .node, pre.tree .row, pre.tree .pad { display: block; }
 .map .wide, .map .pad { display: none; }
