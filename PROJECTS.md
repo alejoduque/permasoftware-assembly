@@ -120,4 +120,4 @@ Gaps to close:
 
 - Add a licence file to every repository that has none.
 - Publish the code of iScream, LiquidIce and SoundWalk when it is ready.
-- Use the KLAP instance at klap.altred.xyz in the gatherings.
+- Use the KLAP instance at klap.altred.xyz for group decisions.

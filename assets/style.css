@@ -3,19 +3,19 @@
   --ink: #000;
   --paper: #fff;
   --meta: #555;
-  --img: none;
+  --hl: #ececec;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --ink: #eee;
     --paper: #111;
     --meta: #999;
-    --img: invert(1);
+    --hl: #262626;
   }
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   margin: 0 auto;
   padding: 24px 16px 40px;
@@ -27,9 +27,17 @@ body {
 a { color: inherit; text-underline-offset: 2px; }
 a:hover { background: var(--ink); color: var(--paper); }
 img { display: block; width: 100%; height: auto; image-rendering: pixelated; margin: 14px 0; }
-img.banner { filter: var(--img); margin: 0; }
 
-/* header */
+/* header :: ASCII title, full screen width, clipped at both sides */
+.ascii {
+  display: flex; justify-content: center;
+  width: 100vw; margin: 4px 0 0 calc(50% - 50vw);
+  overflow: hidden; white-space: pre;
+  font-size: min(14px, calc((100vw - 24px) / 48)); line-height: 1.05;
+  font-family: inherit; color: var(--ink);
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
 .lang { text-align: right; font-size: 13px; color: var(--meta); margin: 0 0 12px; }
 .lang a[aria-current] { color: var(--ink); font-weight: bold; text-decoration: none; }
 .kicker { font-weight: bold; font-size: 12px; letter-spacing: .02em; margin: 16px 0 0; }
@@ -74,4 +82,12 @@ footer {
   color: var(--meta);
   font-size: 12px;
   text-align: center;
+}
+
+/* cursor marker: the block under the pointer gets a grey field and a black bar in the margin */
+@media (hover: hover) {
+  main > section > p:hover, main li:hover, .project:hover, figure:hover {
+    background: var(--hl);
+    box-shadow: -10px 0 0 var(--hl), -14px 0 0 var(--ink);
+  }
 }
