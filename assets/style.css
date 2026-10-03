@@ -1,4 +1,18 @@
-/* permasoftware assembly :: one small stylesheet, system fonts only */
+/* permasoftware assembly :: one small stylesheet
+   Fonts: Handjet 600 for titles, Departure Mono for text, logo and tree.
+   Both are SIL OFL, cut down to the characters of this site, hosted here (about 11 KB). */
+@font-face {
+  font-family: "Departure Mono";
+  src: url("fonts/departure-mono.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Handjet";
+  src: url("fonts/handjet-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   /* always black: on OLED screens black pixels use no power */
   color-scheme: dark;
@@ -6,66 +20,71 @@
   --paper: #000;
   --meta: #999;
   --hl: #1c1c1c;
+  --mono: "Departure Mono", "Courier New", Menlo, Consolas, monospace;
+  --display: "Handjet", "Departure Mono", sans-serif;
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
-html { background: var(--paper); }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; background: var(--paper); }
 body {
   margin: 0 auto;
   padding: 24px 16px 40px;
   max-width: 72ch;
-  font: 15px/1.5 "Courier New", Courier, monospace;
+  font: 16.5px/1.6 var(--mono);
   color: var(--ink);
   background: var(--paper);
 }
-a { color: inherit; text-underline-offset: 2px; }
+a { color: inherit; text-underline-offset: 3px; }
 a:hover { background: var(--ink); color: var(--paper); }
 img { display: block; width: 100%; height: auto; image-rendering: pixelated; margin: 14px 0; }
 
-/* header :: ASCII title, full screen width, clipped at both sides */
+/* header :: box-drawing title (oh-my-logo, block font 'chrome'), full screen width */
 .ascii {
   display: flex; justify-content: center;
   width: 100vw; margin: 4px 0 0 calc(50% - 50vw);
   overflow: hidden; white-space: pre;
-  font-size: min(22px, calc((100vw - 24px) / 31.5)); line-height: 1;
-  /* box-drawing title (oh-my-logo, block font 'chrome'): fonts with full box-drawing glyphs */
-  font-family: "Courier New", Menlo, Consolas, "DejaVu Sans Mono", monospace; color: var(--ink);
+  font-family: var(--mono); font-size: min(22px, calc((100vw - 24px) / 36.5)); line-height: 1;
+  color: var(--ink);
 }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .lang { text-align: right; font-size: 13px; color: var(--meta); margin: 0 0 12px; }
-.lang a[aria-current] { color: var(--ink); font-weight: bold; text-decoration: none; }
-.kicker { font-weight: bold; font-size: 12px; letter-spacing: .02em; margin: 16px 0 0; }
-h1 { font-size: 26px; line-height: 1.15; margin: 4px 0; letter-spacing: .01em; }
-.tagline { margin: 0 0 10px; }
-.bar { height: 6px; background: var(--ink); margin: 10px 0 14px; }
-.lead { margin: 0; }
-.meta { color: var(--meta); font-size: 13px; }
+.lang a[aria-current] { color: var(--ink); text-decoration: none; }
+.kicker { font: 600 20px/1.2 var(--display); letter-spacing: .06em; margin: 18px 0 2px; }
+h1 { font: 600 44px/1 var(--display); margin: 4px 0; }
+.tagline { font: 600 clamp(24px, 6vw, 32px)/1.1 var(--display); margin: 0 0 10px; }
+.bar { height: 6px; background: var(--ink); margin: 12px 0 16px; }
+.lead { margin: 0 0 10px; }
+.meta { color: var(--meta); font-size: 14px; }
 
-/* sections */
+/* sections :: big Handjet heads */
 h2 {
-  font-size: 15px;
-  margin: 34px 0 12px;
-  padding-bottom: 4px;
+  font: 600 clamp(30px, 8vw, 40px)/1.05 var(--display);
+  letter-spacing: .01em;
+  margin: 44px 0 14px;
+  padding-bottom: 6px;
   border-bottom: 2px solid var(--ink);
 }
 h2::before { content: "// "; }
-h3 { font-size: 15px; margin: 0; }
-p { margin: 0 0 10px; }
+p { margin: 0 0 12px; }
+/* Departure Mono has no bold: bold words use Handjet instead.
+   In the tree every bold name ends its line, so the columns stay aligned. */
+b { font: 600 1.2em/1 var(--display); letter-spacing: .02em; }
+pre.tree b { font-size: 1.35em; }
+footer b { font: inherit; }
 
-ul.gt { list-style: none; padding: 0; margin: 0 0 10px; }
-ul.gt li { padding-left: 2.2ch; text-indent: -2.2ch; margin-bottom: 4px; }
-ul.gt li::before { content: "> "; font-weight: bold; }
+ul.gt { list-style: none; padding: 0; margin: 0 0 12px; }
+ul.gt li { padding-left: 2ch; text-indent: -2ch; margin-bottom: 6px; }
+ul.gt li::before { content: "> "; }
 
-/* projects :: map — ASCII tree. Narrow screens: one column.
+/* projects :: map — ASCII tree. Narrow screens: one column of 48 characters.
    Wide screens: two columns of 50 characters, wider than the text column, never wider than the screen. */
-.map { background: var(--paper); font-size: max(9px, min(15px, calc((100vw - 32px) / 30.5))); margin: 14px 0; }
-pre.tree { font-family: inherit; font-size: inherit; line-height: 1.45; color: var(--ink); margin: 0; overflow: hidden; }
+.map { background: var(--paper); font-size: max(8.5px, min(15px, calc((100vw - 32px) / 33))); margin: 14px 0; }
+pre.tree { font-family: var(--mono); font-size: inherit; line-height: 1.45; color: var(--ink); margin: 0; overflow: hidden; }
 pre.tree .node, pre.tree .row, pre.tree .pad { display: block; }
 .map .wide, .map .pad { display: none; }
 @media (min-width: 760px) {
-  .map { font-size: min(15px, calc((100vw - 48px) / 60)); width: 100ch; margin-left: calc(50% - 50ch); }
+  .map { font-size: min(15px, calc((100vw - 48px) / 64.5)); width: 100ch; margin-left: calc(50% - 50ch); }
   .map .cols { display: grid; grid-template-columns: 50ch 50ch; }
   .map .wide, .map .pad { display: block; }
   .map .narrow { display: none; }
@@ -74,27 +93,25 @@ pre.tree .node, pre.tree .row, pre.tree .pad { display: block; }
 /* figures: inline svg uses currentColor */
 figure { margin: 14px 0; overflow-x: auto; }
 figure svg { display: block; width: 100%; min-width: 560px; height: auto; color: var(--ink); }
-figcaption { color: var(--meta); font-size: 13px; margin-top: 4px; }
-svg text { font-family: "Courier New", Courier, monospace; fill: currentColor; }
+figcaption { color: var(--meta); font-size: 14px; margin-top: 4px; }
+svg text { font-family: var(--mono); font-size: 11.5px; fill: currentColor; }
 svg .soft { opacity: .55; }
 svg .dash { stroke-dasharray: 4 3; }
 
 footer {
-  margin-top: 40px;
+  margin-top: 44px;
   padding-top: 8px;
   border-top: 1px solid var(--meta);
   color: var(--meta);
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 
-/* cursor marker: the block under the pointer gets a grey field and a black bar in the margin */
+/* cursor marker: the block under the pointer gets a grey field and a bar in the margin */
 @media (hover: hover) {
   main > section > p:hover, main li:hover, figure:hover {
     background: var(--hl);
     box-shadow: -10px 0 0 var(--hl), -14px 0 0 var(--ink);
   }
-}
-@media (hover: hover) {
   pre.tree .node:hover { background: var(--hl); box-shadow: inset 4px 0 0 var(--ink); }
 }
