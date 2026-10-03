@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Permasoftware Assembly</title>
+<meta name="description" content="Eine Plattform für Software mit kleinem Fussabdruck für Klimaschutz und technologische Souveränität.">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="de" href="./">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+<p class="lang"><a href="../" hreflang="en">en</a> :: <a href="../es/" hreflang="es">es</a> :: <a href="../fr/" hreflang="fr">fr</a> :: <a href="./" aria-current="page">de</a></p>
+<img class="banner" src="../assets/banner.png" width="800" height="150" alt="">
+<p class="kicker">CCC SWITZERLAND :: SEED GRANTS 2026</p>
+<h1>PERMASOFTWARE ASSEMBLY</h1>
+<p class="tagline">eine Plattform für Software mit kleinem Fussabdruck für Klimaschutz und technologische Souveränität</p>
+<div class="bar"></div>
+<p class="lead">Künstler-Coder:innen und Klimaaktivist:innen machen gemeinsam Software. Die Software hilft Klimakampagnen. Sie braucht wenig Energie und hält lange. Die Gruppe behält die Kontrolle über ihre Werkzeuge, Daten und Server. Das nennen wir technologische Souveränität.</p>
+</header>
+
+<main>
+<section>
+<h2>1. was</h2>
+<p>Die Permasoftware Assembly ist eine Begegnungsresidenz und eine offene Plattform. Software mit kleinem Fussabdruck ist einfach, langlebig, energiesparsam und reparierbar.</p>
+<p>Von Oktober bis Dezember 2026 hält die Assembly drei Arbeitstreffen ab. In jeder Schweizer Sprachregion gibt es ein Treffen: Deutschschweiz, Romandie und Tessin.</p>
+<p>An jedem Treffen baut die Gruppe gemeinsam Werkzeuge. Die Gruppe nutzt KLAP, um gemeinsame Positionen zu finden. Nach den Treffen veröffentlichen wir eine Zusammenfassung und den Code.</p>
+<img src="../assets/tree.png" width="480" height="204" alt="Gerastertes Bild: Menschen stehen um die Wurzeln eines sehr grossen Baumes.">
+</section>
+
+<section>
+<h2>2. prinzipien</h2>
+<ul class="gt">
+<li><b>Einfach.</b> Wenige Teile und wenige Abhängigkeiten verwenden.</li>
+<li><b>Langlebig.</b> Werkzeuge bauen, die viele Jahre funktionieren.</li>
+<li><b>Energiesparsam.</b> Alte Hardware und kleine Server verwenden.</li>
+<li><b>Reparierbar.</b> Den Code veröffentlichen. Kurze Anleitungen schreiben.</li>
+<li><b>Lokal zuerst.</b> Die Daten bleiben bei der Gruppe. Kein Tracking von Menschen.</li>
+<li><b>Kritische KI.</b> KI nur nutzen, wenn sie der Gruppe hilft. Manchmal ist keine KI die bessere Wahl.</li>
+</ul>
+<p class="meta">quellen :: <a href="https://permacomputing.net/">permacomputing</a> :: <a href="https://codingrights.org/en/library-item/compost-engineers-regenerative-technologies-manifesto/">Compost Engineers</a> (Varon &amp; Egaña, Coding Rights, 2024)</p>
+</section>
+
+<section>
+<h2>3. projekte</h2>
+<p>Diese Projekte gibt es schon. Sie sind die ersten Teile der Plattform.</p>
+
+<div class="project">
+<h3>Radiolibre</h3>
+<p>Ein Community-Radio auf einem kleinen Server. Icecast sendet das Audio und ein statischer Web-Player empfängt es. Hörer:innen brauchen kein Konto.</p>
+<p class="meta">läuft auf :: einem VPS, Icecast, nginx :: <a href="https://radiolibre.altred.xyz">radiolibre.altred.xyz</a> :: <a href="https://github.com/alejoduque/radiolibre_template">Code</a></p>
+</div>
+
+<div class="project">
+<h3>iScream</h3>
+<p>Vom Handy-Browser aus auf Sendung gehen. Keine App und kein Konto nötig. Der Server speichert kein Audio und keine Zugriffsprotokolle. Eine Brücke verbindet den IRC-Chat und die Telegram-Gruppe.</p>
+<p class="meta">läuft auf :: Node, ffmpeg, Ergo IRC :: <a href="https://reporta.altred.xyz">reporta.altred.xyz</a> :: Code noch nicht öffentlich</p>
+</div>
+
+<div class="project">
+<h3>LiquidIce</h3>
+<p>Ein Telegram-Bot für eine Gruppe. Mitglieder senden Fotos, Texte, Audio und Video. Der Bot macht daraus ein Web-Archiv und einen Radio-Stream. Er speichert eine Kopie auf archive.org.</p>
+<p class="meta">läuft auf :: Raspberry Pi 3B+, Liquidsoap :: Code noch nicht öffentlich :: erste Version <a href="https://github.com/alejoduque/Telegram2Icecast">Telegram2Icecast</a></p>
+</div>
+
+<div class="project">
+<h3>KLAP :: Klimat Action Protocol</h3>
+<p>Ein freies Werkzeug für Gruppenentscheidungen. Eine Person schreibt eine These. Andere fügen Gründe hinzu: weil, aber, jedoch. Das Werkzeug zeigt, wo die Gruppe übereinstimmt.</p>
+<p class="meta">läuft auf :: Django, Docker, eigener Server :: <a href="https://github.com/alejoduque/KlimatActionProtocol">Code</a> :: basiert auf arguman.org</p>
+</div>
+
+<div class="project">
+<h3>AudioMoth scripts</h3>
+<p>Skripte für Feldaufnahmen von AudioMoth-Rekordern. Sie finden Klangereignisse, berechnen akustische Indizes und erstellen einen saisonalen Kalender. Die ganze Verarbeitung ist lokal, ohne Cloud.</p>
+<p class="meta">läuft auf :: einem Laptop, Bash, Python, ffmpeg :: <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a> :: <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a></p>
+</div>
+
+<div class="project">
+<h3>SoundWalk :: DerivaSonora</h3>
+<p>Eine Handy-App für Klangspaziergänge. Klänge mit Ort aufnehmen, Notizen hinzufügen und auf einer Karte wieder anhören. Sie funktioniert offline: kein Konto, kein Server, kein Tracking.</p>
+<p class="meta">läuft auf :: Android-Handys, Browser :: <a href="https://biomapp.vercel.app">biomapp.vercel.app</a> :: Code noch nicht öffentlich</p>
+</div>
+</section>
+
+<section>
+<h2>4. karte</h2>
+<p>Die Projekte verbinden sich in drei Zweigen: hören, entscheiden und senden.</p>
+<figure>
+<svg viewBox="0 0 680 440" role="img" aria-labelledby="mapA">
+<title id="mapA">Karte der Projekte unter der Permasoftware Assembly</title>
+<defs><marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g fill="none" stroke="currentColor" stroke-width="1.5">
+<rect x="190" y="8" width="300" height="46" stroke-width="3"/>
+<path d="M340 54V64M115 72V64H565V72M340 64V72"/>
+<rect x="25" y="100" width="180" height="30"/>
+<rect x="25" y="155" width="180" height="30"/>
+<rect x="25" y="210" width="180" height="30"/>
+<rect x="250" y="100" width="180" height="30" class="soft"/>
+<rect x="250" y="155" width="180" height="30" stroke-width="3"/>
+<rect x="250" y="210" width="180" height="30" class="soft"/>
+<rect x="250" y="265" width="180" height="30"/>
+<rect x="475" y="100" width="180" height="30"/>
+<rect x="475" y="155" width="180" height="38"/>
+<rect x="475" y="215" width="180" height="30" stroke-width="3"/>
+<rect x="475" y="275" width="85" height="30"/>
+<rect x="570" y="275" width="85" height="30"/>
+<rect x="25" y="330" width="405" height="34"/>
+<rect x="25" y="395" width="630" height="34" class="dash"/>
+<g marker-end="url(#m1)">
+<path d="M115 130V153"/>
+<path d="M340 130V153"/>
+<path d="M340 240V263"/>
+<path d="M565 130V153"/>
+<path d="M565 193V213"/>
+<path d="M517 275V247"/>
+<path d="M612 245V273"/>
+<path d="M115 240V328"/>
+<path d="M205 170H222V328"/>
+<path d="M340 295V328"/>
+<path d="M475 290H462V115H473" marker-start="url(#m1)"/>
+<path d="M228 364V393" class="dash"/>
+<path d="M565 305V393" class="dash"/>
+</g>
+</g>
+<g font-size="12" text-anchor="middle">
+<text x="340" y="29" font-size="14" font-weight="bold">PERMASOFTWARE ASSEMBLY</text>
+<text x="340" y="46" font-size="11">Software mit kleinem Fussabdruck</text>
+<text x="115" y="90" font-weight="bold">// hören</text>
+<text x="340" y="90" font-weight="bold">// entscheiden</text>
+<text x="565" y="90" font-weight="bold">// senden</text>
+<text x="115" y="119">audiomoth-scripts</text>
+<text x="115" y="174">bioacustic-scripts</text>
+<text x="115" y="229">SoundWalk (BioMapp)</text>
+<text x="340" y="119" class="soft">arguman.org</text>
+<text x="340" y="174" font-weight="bold">KLAP</text>
+<text x="340" y="229" class="soft">cryptomonedacultural</text>
+<text x="340" y="284">DIAP</text>
+<text x="565" y="119">Telegram-Gruppe</text>
+<text x="565" y="171">LiquidIce</text>
+<text x="565" y="186" font-size="10" class="soft">aus Telegram2Icecast</text>
+<text x="565" y="234" font-weight="bold">Icecast-Stream</text>
+<text x="517" y="294">iScream</text>
+<text x="612" y="294">radiolibre</text>
+<text x="228" y="351">BiocracyEngine</text>
+<text x="340" y="416" font-weight="bold">nächster Schritt :: Reticulum · Telegram-Bots · lokale KI</text>
+</g>
+</svg>
+<figcaption>Linie mit Pfeil: Daten oder Code gehen in diese Richtung. Zwei Pfeile: Brücke IRC ⇄ Telegram. Grau: ältere Projekte. Gestrichelt: nächster Schritt. Ganze Karte: <a href="https://github.com/alejoduque/permasoftware-assembly/blob/main/PROJECTS.md">PROJECTS.md</a></figcaption>
+</figure>
+</section>
+
+<section>
+<h2>5. nächster schritt</h2>
+<p>Der nächste Schritt ist ein Netz, das kein Internet und keine grossen Firmen braucht.</p>
+<ul class="gt">
+<li><b>Reticulum.</b> Ein Netzwerk-Stack für Mesh-Netze. Er funktioniert über LoRa-Funk, Packet Radio, WLAN und das Internet. Gruppen senden Nachrichten ohne zentralen Server.</li>
+<li><b>Telegram.</b> Viele Gruppen nutzen heute Telegram. Bots bleiben die einfache Eingangstür. Später verbindet eine Brücke Telegram und Reticulum.</li>
+<li><b>Lokale KI.</b> Kleine Modelle laufen auf der eigenen Hardware der Gruppe. Beispiele: Transkription für Radioarchive, Zusammenfassungen von KLAP-Debatten. Keine Daten gehen in eine Cloud.</li>
+</ul>
+<figure>
+<svg viewBox="0 0 680 240" role="img" aria-labelledby="mapB">
+<title id="mapB">Heute und nächster Schritt, in drei Ebenen</title>
+<defs><marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g fill="none" stroke="currentColor" stroke-width="1.5">
+<rect x="160" y="34" width="250" height="56"/>
+<rect x="160" y="107" width="250" height="56"/>
+<rect x="160" y="180" width="250" height="56"/>
+<rect x="440" y="34" width="235" height="56" class="dash"/>
+<rect x="440" y="107" width="235" height="56" class="dash"/>
+<rect x="440" y="180" width="235" height="56" class="dash"/>
+<g marker-end="url(#m2)"><path d="M412 62H438"/><path d="M412 135H438"/><path d="M412 208H438"/></g>
+</g>
+<g font-size="12">
+<text x="285" y="20" text-anchor="middle" font-weight="bold">heute</text>
+<text x="557" y="20" text-anchor="middle" font-weight="bold">nächster Schritt</text>
+<text x="8" y="66" font-weight="bold">transport</text>
+<text x="8" y="139" font-weight="bold">nachrichten</text>
+<text x="8" y="212" font-weight="bold">intelligenz</text>
+<g text-anchor="middle">
+<text x="285" y="58">Internet + ein kleiner Server</text>
+<text x="285" y="76" class="soft">(VPS, Raspberry Pi)</text>
+<text x="285" y="131">Telegram-Gruppe</text>
+<text x="285" y="149" class="soft">+ IRC-Brücke (iScream)</text>
+<text x="285" y="204">Regeln, keine KI, keine Cloud</text>
+<text x="285" y="222" class="soft">(AudioMoth-Detektor)</text>
+<text x="557" y="58">Reticulum-Mesh</text>
+<text x="557" y="76" class="soft">LoRa · Packet Radio · WLAN</text>
+<text x="557" y="131">Telegram + Reticulum</text>
+<text x="557" y="149" class="soft">(LXMF-Nachrichten)</text>
+<text x="557" y="204">lokale KI, eigene Hardware</text>
+<text x="557" y="222" class="soft">Transkription · Zusammenfassung</text>
+</g>
+</g>
+</svg>
+<figcaption>Durchgezogen: funktioniert heute. Gestrichelt: nächster Schritt.</figcaption>
+</figure>
+<img src="../assets/lora.png" width="480" height="268" alt="Gerastertes Bild: zwei Menschen bauen in einem Wald eine Antenne für ein gemeinschaftliches LoRa-Mesh auf.">
+</section>
+
+<section>
+<h2>6. menschen</h2>
+<ul class="gt">
+<li><b>Alejandro Duque Jaramillo</b> :: Koordination. Schweizerisch-kolumbianischer Künstler. Linux und Kulturmanagement. Entwickler von KLAP und Radiolibre.</li>
+<li><b>Gonzague Rebetez</b> :: KI-Berater. New-Media-Künstler in Biel/Bienne. Mitgründer des Kunst- und Wissenschaftskollektivs WÆXE.</li>
+<li><b>Creative Climate Changemakers Switzerland 2026</b> :: Seed Grant.</li>
+</ul>
+<p><b>Mitmachen.</b> Eröffne ein Issue auf <a href="https://github.com/alejoduque/permasoftware-assembly/issues">GitHub</a>. Erzähl uns von deinem Projekt und deinen Software-Bedürfnissen.</p>
+</section>
+</main>
+
+<footer>
+<p>permasoftware assembly :: ccc switzerland seed grants 2026</p>
+<p>Text CC BY-SA 4.0 :: Code MIT :: keine Cookies, kein Tracking, kein JavaScript :: diese Seite: 53 KB</p>
+</footer>
+
+</body>
+</html>

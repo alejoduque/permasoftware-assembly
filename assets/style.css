@@ -1,0 +1,77 @@
+/* permasoftware assembly :: one small stylesheet, system fonts only */
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --meta: #555;
+  --img: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eee;
+    --paper: #111;
+    --meta: #999;
+    --img: invert(1);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  max-width: 72ch;
+  font: 15px/1.5 "Courier New", Courier, monospace;
+  color: var(--ink);
+  background: var(--paper);
+}
+a { color: inherit; text-underline-offset: 2px; }
+a:hover { background: var(--ink); color: var(--paper); }
+img { display: block; width: 100%; height: auto; image-rendering: pixelated; margin: 14px 0; }
+img.banner { filter: var(--img); margin: 0; }
+
+/* header */
+.lang { text-align: right; font-size: 13px; color: var(--meta); margin: 0 0 12px; }
+.lang a[aria-current] { color: var(--ink); font-weight: bold; text-decoration: none; }
+.kicker { font-weight: bold; font-size: 12px; letter-spacing: .02em; margin: 16px 0 0; }
+h1 { font-size: 26px; line-height: 1.15; margin: 4px 0; letter-spacing: .01em; }
+.tagline { margin: 0 0 10px; }
+.bar { height: 6px; background: var(--ink); margin: 10px 0 14px; }
+.lead { margin: 0; }
+.meta { color: var(--meta); font-size: 13px; }
+
+/* sections */
+h2 {
+  font-size: 15px;
+  margin: 34px 0 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--ink);
+}
+h2::before { content: "// "; }
+h3 { font-size: 15px; margin: 0; }
+p { margin: 0 0 10px; }
+
+ul.gt { list-style: none; padding: 0; margin: 0 0 10px; }
+ul.gt li { padding-left: 2.2ch; text-indent: -2.2ch; margin-bottom: 4px; }
+ul.gt li::before { content: "> "; font-weight: bold; }
+
+/* projects */
+.project { border-left: 2px solid var(--ink); padding: 2px 0 2px 12px; margin: 0 0 18px; }
+.project p { margin: 4px 0; }
+.project .meta { margin: 0; }
+
+/* figures: inline svg uses currentColor */
+figure { margin: 14px 0; overflow-x: auto; }
+figure svg { display: block; width: 100%; min-width: 560px; height: auto; color: var(--ink); }
+figcaption { color: var(--meta); font-size: 13px; margin-top: 4px; }
+svg text { font-family: "Courier New", Courier, monospace; fill: currentColor; }
+svg .soft { opacity: .55; }
+svg .dash { stroke-dasharray: 4 3; }
+
+footer {
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid var(--meta);
+  color: var(--meta);
+  font-size: 12px;
+  text-align: center;
+}
