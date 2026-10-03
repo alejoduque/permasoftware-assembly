@@ -33,8 +33,9 @@ img { display: block; width: 100%; height: auto; image-rendering: pixelated; mar
   display: flex; justify-content: center;
   width: 100vw; margin: 4px 0 0 calc(50% - 50vw);
   overflow: hidden; white-space: pre;
-  font-size: min(14px, calc((100vw - 24px) / 48)); line-height: 1.05;
-  font-family: inherit; color: var(--ink);
+  font-size: min(18px, calc((100vw - 24px) / 35)); line-height: 1;
+  /* box-drawing title (oh-my-logo, block font 'chrome'): fonts with full box-drawing glyphs */
+  font-family: "Courier New", Menlo, Consolas, "DejaVu Sans Mono", monospace; color: var(--ink);
 }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
