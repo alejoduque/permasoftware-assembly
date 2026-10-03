@@ -62,10 +62,13 @@ ul.gt { list-style: none; padding: 0; margin: 0 0 10px; }
 ul.gt li { padding-left: 2.2ch; text-indent: -2.2ch; margin-bottom: 4px; }
 ul.gt li::before { content: "> "; font-weight: bold; }
 
-/* projects */
-.project { border-left: 2px solid var(--ink); padding: 2px 0 2px 12px; margin: 0 0 18px; }
-.project p { margin: 4px 0; }
-.project .meta { margin: 0; }
+/* projects :: map — one ASCII tree, each node is a block */
+pre.tree {
+  font-family: inherit; color: var(--ink);
+  font-size: max(10px, min(15px, calc((100vw - 32px) / 33))); line-height: 1.45;
+  margin: 14px 0; overflow-x: auto;
+}
+pre.tree .node, pre.tree .row { display: block; }
 
 /* figures: inline svg uses currentColor */
 figure { margin: 14px 0; overflow-x: auto; }
@@ -86,8 +89,11 @@ footer {
 
 /* cursor marker: the block under the pointer gets a grey field and a black bar in the margin */
 @media (hover: hover) {
-  main > section > p:hover, main li:hover, .project:hover, figure:hover {
+  main > section > p:hover, main li:hover, figure:hover {
     background: var(--hl);
     box-shadow: -10px 0 0 var(--hl), -14px 0 0 var(--ink);
   }
+}
+@media (hover: hover) {
+  pre.tree .node:hover { background: var(--hl); box-shadow: inset 4px 0 0 var(--ink); }
 }

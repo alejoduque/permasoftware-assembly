@@ -53,115 +53,93 @@
 </section>
 
 <section>
-<h2>2. carte</h2>
-<p>Les projets se relient en trois branches : écouter, décider et diffuser.</p>
-<figure>
-<svg viewBox="0 0 680 440" role="img" aria-labelledby="mapA">
-<title id="mapA">Carte des projets sous la Permasoftware Assembly</title>
-<defs><marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-<g fill="none" stroke="currentColor" stroke-width="1.5">
-<rect x="190" y="8" width="300" height="46" stroke-width="3"/>
-<path d="M340 54V64M115 72V64H565V72M340 64V72"/>
-<rect x="25" y="100" width="180" height="30"/>
-<rect x="25" y="155" width="180" height="30"/>
-<rect x="25" y="210" width="180" height="30"/>
-<rect x="250" y="100" width="180" height="30" class="soft"/>
-<rect x="250" y="155" width="180" height="30" stroke-width="3"/>
-<rect x="250" y="210" width="180" height="30" class="soft"/>
-<rect x="250" y="265" width="180" height="30"/>
-<rect x="475" y="100" width="180" height="30"/>
-<rect x="475" y="155" width="180" height="38"/>
-<rect x="475" y="215" width="180" height="30" stroke-width="3"/>
-<rect x="475" y="275" width="85" height="30"/>
-<rect x="570" y="275" width="85" height="30"/>
-<rect x="25" y="330" width="405" height="34"/>
-<rect x="25" y="395" width="630" height="34" class="dash"/>
-<g marker-end="url(#m1)">
-<path d="M115 130V153"/>
-<path d="M340 130V153"/>
-<path d="M340 240V263"/>
-<path d="M565 130V153"/>
-<path d="M565 193V213"/>
-<path d="M517 275V247"/>
-<path d="M612 245V273"/>
-<path d="M115 240V328"/>
-<path d="M205 170H222V328"/>
-<path d="M340 295V328"/>
-<path d="M475 290H462V115H473" marker-start="url(#m1)"/>
-<path d="M228 364V393" class="dash"/>
-<path d="M565 305V393" class="dash"/>
-</g>
-</g>
-<g font-size="12" text-anchor="middle">
-<text x="340" y="29" font-size="14" font-weight="bold">PERMASOFTWARE ASSEMBLY</text>
-<text x="340" y="46" font-size="11">logiciel à faible empreinte</text>
-<text x="115" y="90" font-weight="bold">// écouter</text>
-<text x="340" y="90" font-weight="bold">// décider</text>
-<text x="565" y="90" font-weight="bold">// diffuser</text>
-<text x="115" y="119">audiomoth-scripts</text>
-<text x="115" y="174">bioacustic-scripts</text>
-<text x="115" y="229">SoundWalk (BioMapp)</text>
-<text x="340" y="119" class="soft">arguman.org</text>
-<text x="340" y="174" font-weight="bold">KLAP</text>
-<text x="340" y="229" class="soft">cryptomonedacultural</text>
-<text x="340" y="284">DIAP</text>
-<text x="565" y="119">groupe Telegram</text>
-<text x="565" y="171">LiquidIce</text>
-<text x="565" y="186" font-size="10" class="soft">issu de Telegram2Icecast</text>
-<text x="565" y="234" font-weight="bold">flux Icecast</text>
-<text x="517" y="294">iScream</text>
-<text x="612" y="294">radiolibre</text>
-<text x="228" y="351">BiocracyEngine</text>
-<text x="340" y="416" font-weight="bold">suite :: Reticulum · bots Telegram · IA locale</text>
-</g>
-</svg>
-<figcaption>Ligne avec flèche : les données ou le code vont dans ce sens. Deux flèches : pont IRC ⇄ Telegram. Gris : projets anciens. Pointillé : étape suivante. Carte complète : <a href="https://github.com/alejoduque/permasoftware-assembly/blob/main/PROJECTS.md">PROJECTS.md</a></figcaption>
-</figure>
+<h2>2. projets :: carte</h2>
+<p>Ces projets existent déjà. Ils sont les premières parties de la plateforme. Les projets se relient en trois branches : écouter, décider et diffuser.</p>
+<pre class="tree"><span class="row"><b>PERMASOFTWARE ASSEMBLY</b>
+|</span><span class="row">+-- <b>// écouter</b>
+|   |</span><span class="node">|   +-- <b>AudioMoth scripts</b>
+|   |     Des scripts pour les enregistrements de
+|   |     terrain des enregistreurs AudioMoth. Ils
+|   |     trouvent des événements sonores, calculent
+|   |     des indices acoustiques et font un
+|   |     calendrier saisonnier. Tout le traitement
+|   |     est local, sans cloud.
+|   |     tourne sur
+|   |     un ordinateur portable, Bash, Python, ffmpeg
+|   |     >> <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a> :: <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a>
+|   |     -&gt; BiocracyEngine
+|   |</span><span class="node">|   +-- <b>SoundWalk :: DerivaSonora</b>
+|   |     Une application mobile pour les balades
+|   |     sonores. Enregistrer des sons avec leur
+|   |     lieu, ajouter des notes et réécouter sur une
+|   |     carte. Elle fonctionne hors ligne : sans
+|   |     compte, sans serveur, sans pistage.
+|   |     tourne sur :: téléphones Android, navigateur
+|   |     >> <a href="https://biomapp.vercel.app">biomapp.vercel.app</a>
+|   |     >> code pas encore public
+|   |     -&gt; BiocracyEngine
+|   |</span><span class="node">|   `-- <b>BiocracyEngine</b>
+|         Instrument live de son et d'image : sons de
+|         la forêt, un flux blockchain et un parlement
+|         multi-espèces.
+|         >> <a href="https://github.com/alejoduque/BiocracyEngine">code</a>
+|</span><span class="row">+-- <b>// décider</b>
+|   |</span><span class="node">|   +-- <b>KLAP :: Klimat Action Protocol</b>
+|   |     Un outil libre pour les décisions de groupe.
+|   |     Une personne écrit une affirmation. D'autres
+|   |     personnes ajoutent des raisons : parce que,
+|   |     mais, cependant. L'outil montre où le groupe
+|   |     est d'accord.
+|   |     tourne sur
+|   |     Django, Docker, votre propre serveur
+|   |     >> <a href="https://klap.altred.xyz">klap.altred.xyz</a> :: <a href="https://github.com/alejoduque/KlimatActionProtocol">code</a>
+|   |     >> basé sur arguman.org
+|   |</span><span class="node">|   `-- <b>DIAP</b>
+|         Conception d'une DAO communautaire pour la
+|         gouvernance du territoire. Elle utilise des
+|         blockchains sobres en énergie.
+|         >> <a href="https://github.com/alejoduque/DIAP">code</a>
+|         -&gt; BiocracyEngine
+|</span><span class="row">+-- <b>// diffuser</b>
+|   |</span><span class="node">|   +-- <b>groupe Telegram</b>
+|   |     -&gt; LiquidIce
+|   |     &lt;-&gt; iScream (IRC)
+|   |</span><span class="node">|   +-- <b>LiquidIce</b>
+|   |     Un bot Telegram pour un groupe. Les membres
+|   |     envoient des photos, des textes, de l'audio
+|   |     et des vidéos. Le bot fait un site
+|   |     d'archives et un flux radio. Il garde une
+|   |     copie sur archive.org.
+|   |     tourne sur :: Raspberry Pi 3B+, Liquidsoap
+|   |     >> code pas encore public
+|   |     >> première version <a href="https://github.com/alejoduque/Telegram2Icecast">Telegram2Icecast</a>
+|   |     -&gt; flux Icecast
+|   |</span><span class="node">|   +-- <b>iScream</b>
+|   |     Passer à l'antenne depuis le navigateur d'un
+|   |     téléphone. Pas besoin d'application ni de
+|   |     compte. Le serveur ne garde ni audio ni
+|   |     journaux d'accès. Un pont relie le chat IRC
+|   |     et le groupe Telegram.
+|   |     tourne sur :: Node, ffmpeg, Ergo IRC
+|   |     >> <a href="https://reporta.altred.xyz">reporta.altred.xyz</a>
+|   |     >> code pas encore public
+|   |     -&gt; flux Icecast
+|   |</span><span class="node">|   +-- <b>flux Icecast</b>
+|   |     -&gt; Radiolibre
+|   |</span><span class="node">|   `-- <b>Radiolibre</b>
+|         Une radio communautaire sur un petit
+|         serveur. Icecast envoie l'audio et un
+|         lecteur web statique le reçoit. Les
+|         auditeurs n'ont pas besoin de compte.
+|         tourne sur :: un VPS, Icecast, nginx
+|         >> <a href="https://radiolibre.altred.xyz">radiolibre.altred.xyz</a> :: <a href="https://github.com/alejoduque/radiolibre_template">code</a>
+|</span><span class="node">`.. <a href="#next"><b>suite</b></a>
+      Reticulum · bots Telegram · IA locale</span></pre>
+<p class="meta">-&gt; les données ou le code vont dans ce sens. Les noms soulignés sont des liens. Carte complète : <a href="https://github.com/alejoduque/permasoftware-assembly/blob/main/PROJECTS.md">PROJECTS.md</a></p>
 </section>
 
-<section>
-<h2>3. projets</h2>
-<p>Ces projets existent déjà. Ils sont les premières parties de la plateforme.</p>
-
-<div class="project">
-<h3>Radiolibre</h3>
-<p>Une radio communautaire sur un petit serveur. Icecast envoie l'audio et un lecteur web statique le reçoit. Les auditeurs n'ont pas besoin de compte.</p>
-<p class="meta">tourne sur :: un VPS, Icecast, nginx :: <a href="https://radiolibre.altred.xyz">radiolibre.altred.xyz</a> :: <a href="https://github.com/alejoduque/radiolibre_template">code</a></p>
-</div>
-
-<div class="project">
-<h3>iScream</h3>
-<p>Passer à l'antenne depuis le navigateur d'un téléphone. Pas besoin d'application ni de compte. Le serveur ne garde ni audio ni journaux d'accès. Un pont relie le chat IRC et le groupe Telegram.</p>
-<p class="meta">tourne sur :: Node, ffmpeg, Ergo IRC :: <a href="https://reporta.altred.xyz">reporta.altred.xyz</a> :: code pas encore public</p>
-</div>
-
-<div class="project">
-<h3>LiquidIce</h3>
-<p>Un bot Telegram pour un groupe. Les membres envoient des photos, des textes, de l'audio et des vidéos. Le bot fait un site d'archives et un flux radio. Il garde une copie sur archive.org.</p>
-<p class="meta">tourne sur :: Raspberry Pi 3B+, Liquidsoap :: code pas encore public :: première version <a href="https://github.com/alejoduque/Telegram2Icecast">Telegram2Icecast</a></p>
-</div>
-
-<div class="project">
-<h3>KLAP :: Klimat Action Protocol</h3>
-<p>Un outil libre pour les décisions de groupe. Une personne écrit une affirmation. D'autres personnes ajoutent des raisons : parce que, mais, cependant. L'outil montre où le groupe est d'accord.</p>
-<p class="meta">tourne sur :: Django, Docker, votre propre serveur :: <a href="https://klap.altred.xyz">klap.altred.xyz</a> :: <a href="https://github.com/alejoduque/KlimatActionProtocol">code</a> :: basé sur arguman.org</p>
-</div>
-
-<div class="project">
-<h3>AudioMoth scripts</h3>
-<p>Des scripts pour les enregistrements de terrain des enregistreurs AudioMoth. Ils trouvent des événements sonores, calculent des indices acoustiques et font un calendrier saisonnier. Tout le traitement est local, sans cloud.</p>
-<p class="meta">tourne sur :: un ordinateur portable, Bash, Python, ffmpeg :: <a href="https://github.com/alejoduque/bioacustic-scripts">bioacustic-scripts</a> :: <a href="https://github.com/alejoduque/audiomoth-scripts">audiomoth-scripts</a></p>
-</div>
-
-<div class="project">
-<h3>SoundWalk :: DerivaSonora</h3>
-<p>Une application mobile pour les balades sonores. Enregistrer des sons avec leur lieu, ajouter des notes et réécouter sur une carte. Elle fonctionne hors ligne : sans compte, sans serveur, sans pistage.</p>
-<p class="meta">tourne sur :: téléphones Android, navigateur :: <a href="https://biomapp.vercel.app">biomapp.vercel.app</a> :: code pas encore public</p>
-</div>
-</section>
-
-<section>
-<h2>4. suite</h2>
+<section id="next">
+<h2>3. suite</h2>
 <p>L'étape suivante est un réseau qui n'a pas besoin d'internet ni des grandes entreprises.</p>
 <ul class="gt">
 <li><b>Reticulum.</b> Une pile réseau pour les réseaux maillés. Elle fonctionne sur radio LoRa, radio par paquets, Wi-Fi et internet. Les groupes envoient des messages sans serveur central.</li>
@@ -209,7 +187,7 @@
 </section>
 
 <section>
-<h2>5. personnes</h2>
+<h2>4. personnes</h2>
 <ul class="gt">
 <li><b>Alejandro Duque Jaramillo</b> :: coordination. Artiste suisse-colombien. Linux et gestion culturelle. Développeur de KLAP et de Radiolibre.</li>
 <li><b>Gonzague Rebetez</b> :: conseiller IA. Artiste des nouveaux médias à Bienne. Cofondateur du collectif art/science WÆXE.</li>
@@ -221,7 +199,7 @@
 
 <footer>
 <p>permasoftware assembly :: ccc switzerland seed grants 2026</p>
-<p>texte CC BY-SA 4.0 :: code MIT :: sans cookies, sans pistage, sans JavaScript :: cette page : 34 KB</p>
+<p>texte CC BY-SA 4.0 :: code MIT :: sans cookies, sans pistage, sans JavaScript :: cette page : 33 KB</p>
 </footer>
 
 </body>
