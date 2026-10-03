@@ -50,7 +50,7 @@ The full map, with every repository, status and link: [PROJECTS.md](PROJECTS.md)
 ## // this repository
 
 - Static HTML and one CSS file. No JavaScript, no build step, no external requests, no tracking.
-- Each page is about 31 KB, images included. The title is ASCII art; the one image is a 1-bit dithered PNG.
+- Each page is about 32 KB, images included. The title is ASCII art; the one image is a 1-bit dithered PNG.
 - To edit a page, change the HTML file of that language: `index.html` (en), `es/`, `fr/`, `de/`.
 - To see the site on your computer: `python3 -m http.server` and open <http://localhost:8000>.
 - GitHub Pages serves the `main` branch from the root folder.
