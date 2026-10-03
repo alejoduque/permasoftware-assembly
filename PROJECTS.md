@@ -71,7 +71,7 @@ WAV (AudioMoth) → spectrogram → event detection (spectral flux) → features
 
 | project | what it does | runs on | status | code |
 |---|---|---|---|---|
-| KLAP :: Klimat Action Protocol | A group maps its reasons (because / but / however). Each reason gets a weight. The tool shows support and objection for each claim. | Django, Docker :: self-hosted | prototype | [public](https://github.com/alejoduque/KlimatActionProtocol) |
+| KLAP :: Klimat Action Protocol | A group maps its reasons (because / but / however). Each reason gets a weight. The tool shows support and objection for each claim. | one VPS :: Django, Gunicorn, nginx | live | [public](https://github.com/alejoduque/KlimatActionProtocol) :: [klap.altred.xyz](https://klap.altred.xyz) |
 | arguman.org | The open-source argument-mapping platform that KLAP comes from. | Django | archive (fork) | [public](https://github.com/alejoduque/arguman.org) |
 | DIAP | Design for a community DAO for land governance and restoration. Uses low-energy chains (Algorand, Hedera), test network only. | TypeScript, SuperCollider | prototype | [public](https://github.com/alejoduque/DIAP) |
 | cryptomonedacultural | 2018 workshop: a blockchain as a cultural tool, not a financial tool. Origin of the DIAP token idea. | GitBook | archive | [public](https://github.com/alejoduque/cryptomonedacultural) |
@@ -120,4 +120,4 @@ Gaps to close:
 
 - Add a licence file to every repository that has none.
 - Publish the code of iScream, LiquidIce and SoundWalk when it is ready.
-- Run one public KLAP instance for the gatherings.
+- Use the KLAP instance at klap.altred.xyz in the gatherings.
