@@ -51,7 +51,7 @@ The full map, with every repository, status and link: [PROJECTS.md](PROJECTS.md)
 
 ## // this repository
 
-- Static HTML, one CSS file and two small fonts: [Handjet](https://github.com/rosettatype/Handjet) 600 for titles and [Departure Mono](https://departuremono.com/) for text. Both are SIL OFL, cut down to the characters of this site (about 11 KB together) and hosted here, not on a font service.
+- Static HTML, one CSS file and two small fonts: [Handjet](https://github.com/rosettatype/Handjet) 600 for titles (an instance of the variable font, so each letter keeps its separate pixel elements) and [Departure Mono](https://departuremono.com/) for text. Both are SIL OFL, cut down to the characters of this site (about 11 KB together) and hosted here, not on a font service.
 - Plain HTML, no framework. No JavaScript, no build step, no external requests, no analytics. GitHub can see the visits, because it hosts the pages.
 - Each page is about 43 KB, fonts and images included. The title is text art: the block font 'chrome' from [oh-my-logo](https://github.com/shinshin86/oh-my-logo). The site is always black: on OLED screens black pixels use no power, and there is no animation. The one image is a 1-bit dithered PNG.
 - To edit a page, change the HTML file of that language: `index.html` (en), `es/`, `fr/`, `de/`.
@@ -59,6 +59,8 @@ The full map, with every repository, status and link: [PROJECTS.md](PROJECTS.md)
 - GitHub Pages serves the `main` branch from the root folder.
 
 ## // people
+
+Alejandro Duque Jaramillo and Gonzague Rebetez started the Permasoftware Assembly. It is an open community. People from all parts of the world can join: people who share the principles and who care about nature.
 
 - **Alejandro Duque Jaramillo** :: coordination, KLAP, Radiolibre.
 - **Gonzague Rebetez** :: AI advisor, WÆXE.
