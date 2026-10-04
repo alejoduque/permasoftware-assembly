@@ -1,7 +1,14 @@
 /* permasoftware assembly :: one small stylesheet
-   Font: Departure Mono (1-bit pixel, SIL OFL) for everything, cut down to the
-   characters of this site and hosted here (about 6 KB).
+   Fonts: Handjet for the title only (its pixel elements give the glitch),
+   Departure Mono (1-bit pixel) for everything else. Both SIL OFL, cut down
+   to the characters of this site and hosted here (about 7 KB together).
    Pixel sizes are multiples of 11px (its grid), so the titles stay sharp. */
+@font-face {
+  font-family: "Handjet";
+  src: url("fonts/handjet-title.woff2") format("woff2");   /* only the letters of the title, 1.5 KB */
+  font-weight: 600;
+  font-display: swap;
+}
 @font-face {
   font-family: "Departure Mono";
   src: url("fonts/departure-mono.woff2") format("woff2");
@@ -32,20 +39,15 @@ a { color: inherit; text-underline-offset: 3px; }
 a:hover { background: var(--ink); color: var(--paper); }
 img { display: block; width: 100%; height: auto; image-rendering: pixelated; margin: 14px 0; }
 
-/* header :: box-drawing title (oh-my-logo, block font 'chrome'), full screen width */
-.ascii {
-  display: flex; justify-content: center;
-  width: 100vw; margin: 4px 0 0 calc(50% - 50vw);
-  overflow: hidden; white-space: pre;
-  font-family: var(--mono); font-size: min(22px, calc((100vw - 24px) / 36.5)); line-height: 1;
-  color: var(--ink);
+/* header :: big Handjet title */
+h1.title {
+  font: 600 clamp(44px, 15.5vw, 128px)/.86 "Handjet", var(--mono);
+  letter-spacing: .02em; text-align: center; margin: 20px 0 14px;
 }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .lang { text-align: right; font-size: 13px; color: var(--meta); margin: 0 0 12px; }
 .lang a[aria-current] { color: var(--ink); text-decoration: none; }
 .kicker { font: 22px/1.2 var(--mono); letter-spacing: .04em; margin: 18px 0 4px; }
-h1 { font: 44px/1 var(--mono); margin: 4px 0; }
 .tagline { font: clamp(22px, 6vw, 33px)/1.2 var(--mono); margin: 0 0 10px; }
 .bar { height: 6px; background: var(--ink); margin: 12px 0 16px; }
 .lead { margin: 0 0 10px; }

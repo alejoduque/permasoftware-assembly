@@ -5,8 +5,9 @@ Text, images and diagrams
   https://creativecommons.org/licenses/by-sa/4.0/
 
 Fonts (assets/fonts/)
+  Handjet: SIL Open Font License 1.1, The Handjet Project Authors. See OFL-handjet.txt.
   Departure Mono: SIL Open Font License 1.1, Helena Zhang. See OFL-departure-mono.txt.
-  The file is a subset of the original font.
+  Both files are subsets of the original fonts.
 
 Code (HTML structure, CSS)
   MIT License
