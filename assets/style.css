@@ -1,15 +1,10 @@
 /* permasoftware assembly :: one small stylesheet
-   Fonts: Handjet 600 for titles, Departure Mono for text, logo and tree.
-   Both are SIL OFL, cut down to the characters of this site, hosted here (about 11 KB). */
+   Font: Departure Mono (1-bit pixel, SIL OFL) for everything, cut down to the
+   characters of this site and hosted here (about 6 KB).
+   Pixel sizes are multiples of 11px (its grid), so the titles stay sharp. */
 @font-face {
   font-family: "Departure Mono";
   src: url("fonts/departure-mono.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Handjet";
-  src: url("fonts/handjet-600.woff2?v=2") format("woff2");
-  font-weight: 600;
   font-display: swap;
 }
 
@@ -21,7 +16,6 @@
   --meta: #999;
   --hl: #1c1c1c;
   --mono: "Departure Mono", "Courier New", Menlo, Consolas, monospace;
-  --display: "Handjet", "Departure Mono", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -50,27 +44,26 @@ img { display: block; width: 100%; height: auto; image-rendering: pixelated; mar
 
 .lang { text-align: right; font-size: 13px; color: var(--meta); margin: 0 0 12px; }
 .lang a[aria-current] { color: var(--ink); text-decoration: none; }
-.kicker { font: 600 22px/1.2 var(--display); letter-spacing: .06em; margin: 18px 0 2px; }
-h1 { font: 600 44px/1 var(--display); margin: 4px 0; }
-.tagline { font: 600 clamp(26px, 7vw, 40px)/1.05 var(--display); margin: 0 0 10px; }
+.kicker { font: 22px/1.2 var(--mono); letter-spacing: .04em; margin: 18px 0 4px; }
+h1 { font: 44px/1 var(--mono); margin: 4px 0; }
+.tagline { font: clamp(22px, 6vw, 33px)/1.2 var(--mono); margin: 0 0 10px; }
 .bar { height: 6px; background: var(--ink); margin: 12px 0 16px; }
 .lead { margin: 0 0 10px; }
 .meta { color: var(--meta); font-size: 14px; }
 
-/* sections :: big Handjet heads */
+/* sections :: big pixel heads */
 h2 {
-  font: 600 clamp(34px, 9vw, 52px)/1 var(--display);
-  letter-spacing: .01em;
+  font: clamp(22px, 7vw, 44px)/1.1 var(--mono);
   margin: 44px 0 14px;
   padding-bottom: 6px;
   border-bottom: 2px solid var(--ink);
 }
 h2::before { content: "// "; }
 p { margin: 0 0 12px; }
-/* Departure Mono has no bold: bold words use Handjet instead.
+/* Departure Mono has no bold: bold words are bigger and white instead.
    In the tree every bold name ends its line, so the columns stay aligned. */
-b { font: 600 1.2em/1 var(--display); letter-spacing: .02em; }
-pre.tree b { font-size: 1.35em; }
+b { font-weight: normal; font-size: 1.15em; line-height: 1; color: #fff; }
+pre.tree b { font-size: 1.3em; }
 footer b { font: inherit; }
 
 ul.gt { list-style: none; padding: 0; margin: 0 0 12px; }
